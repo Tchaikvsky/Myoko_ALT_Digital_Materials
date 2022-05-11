@@ -7,6 +7,10 @@ function wheelSpin(){
 
     document.getElementById('box').style.transform = "rotate(" + deg + "deg)";
 
-
+    var element = document.getElementById('mainbox')
+    element.classList.remove('animate');
+    setTimeout(function(){
+        element.classList.add('animate');
+    }, 5000);
 
 }

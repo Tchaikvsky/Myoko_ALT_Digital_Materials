@@ -131,3 +131,11 @@ span b{
     font-size: 20px;
 
 }
+.mainbox.animate:after{
+    animation: animateArrow 0.7s ease infinite;
+}
+@keyframes animateArrow{
+    50%{
+        right: -40px;
+    }
+}
