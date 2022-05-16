@@ -133,7 +133,7 @@ span b{
 }
 .mainbox.animate:after{
     right: 0;
-    animation: animateArrow 0.7s ease infinite;
+    animation: animateArrow 0.7s ease 5.0;
 }
 @keyframes animateArrow{
     50%{
