@@ -1,4 +1,11 @@
-.spin_wheel{
+*{
+    box-sizing: border-box;
+}
+body{
+    background: #6495ED;
+    background-size: cover;
+}
+.spin{
     position: absolute;
     top: 50%;
     left: 50%;
