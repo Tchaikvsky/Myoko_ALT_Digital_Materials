@@ -25,6 +25,17 @@
         >
             Canvas not supported, use another browser.
         </canvas>
+
+        <br><br>
+
+        <img id="spin_button" src="spin_off.png" alt="Spin" onClick="spinThree();" />
+        <canvas
+            id='canvas3'
+            width='880'
+            height='300'
+        >
+            Canvas not supported, use another browser.
+        </canvas>
         <script>
             // Create new wheel object specifying the parameters at creation time.
             let wheelOne = new Winwheel({
@@ -42,7 +53,7 @@
                    {'fillStyle' : '#0000FF', 'text' : ''},
                    {'fillStyle' : '#8B4513', 'text' : ''},
                    {'fillStyle' : '#FFFFFF', 'text' : ''},
-                   {'fillStyle' : '#000000', 'text' : '1'}
+                   {'fillStyle' : '#000000', 'text' : ''}
                 ],
                 'animation' :           // Specify the animation to use.
                 {
@@ -58,16 +69,16 @@
                 'textFontSize' : 28,    // Set font size as desired.
                 'segments'     :        // Define segments including colour and text.
                 [
-                   {'fillStyle' : '#FFC0CB', 'text' : ''},
-                   {'fillStyle' : '#9400D3', 'text' : ''},
-                   {'fillStyle' : '#FF0000', 'text' : ''},
-                   {'fillStyle' : '#FFA500', 'text' : ''},
-                   {'fillStyle' : '#FFFF00', 'text' : ''},
-                   {'fillStyle' : '#008000', 'text' : ''},
-                   {'fillStyle' : '#0000FF', 'text' : ''},
-                   {'fillStyle' : '#8B4513', 'text' : ''},
-                   {'fillStyle' : '#FFFFFF', 'text' : ''},
-                   {'fillStyle' : '#000000', 'text' : '1'}
+                   {'fillStyle' : '#DCDCDC', 'text' : '1'},
+                   {'fillStyle' : '#DCDCDC', 'text' : '2'},
+                   {'fillStyle' : '#DCDCDC', 'text' : '3'},
+                   {'fillStyle' : '#DCDCDC', 'text' : '4'},
+                   {'fillStyle' : '#DCDCDC', 'text' : '5'},
+                   {'fillStyle' : '#DCDCDC', 'text' : '6'},
+                   {'fillStyle' : '#DCDCDC', 'text' : '7'},
+                   {'fillStyle' : '#DCDCDC', 'text' : '8'},
+                   {'fillStyle' : '#DCDCDC', 'text' : '9'},
+                   {'fillStyle' : '#DCDCDC', 'text' : '10'}
                 ],
                 'animation' :           // Specify the animation to use.
                 {
@@ -77,51 +88,57 @@
                 }
             });
 
+            let wheelThree = new Winwheel({
+                'numSegments'       : 8,                        
+                'imageDirection' : 'S',   
+                'canvasId'     : 'canvas3',
+                'drawMode'          : 'segmentImage', // Must be segmentImage to draw wheel using one image per segemnt.
+                'segments'          :                 // Define segments including image and text.
+            [
+                {'image' : 'arm.jpg'},    // Specify image for segment along with text.
+                {'image' : 'arm.jpg'},
+                {'image' : 'arm.jpg'},
+                {'image' : 'arm.jpg'},
+                {'image' : 'arm.jpg'},
+                {'image' : 'arm.jpg'},
+                {'image' : 'arm.jpg'},
+                {'image' : 'arm.jpg'}
+            ]
+
+});
+
             let wheelPower    = 1;
-            let wheelSpinning = false;
 
             function spinOne()
             {
-                // Ensure that spinning can't be clicked again while already running.
-                if (wheelSpinning == false) {
                     // Based on the power level selected adjust the number of spins for the wheel, the more times is has
                     // to rotate with the duration of the animation the quicker the wheel spins.
                     wheelOne.animation.spins = 4;
 
-
-                    // Disable the spin button so can't click again while wheel is spinning.
-                    document.getElementById('spin_button').src       = "spin_off.png";
-                    document.getElementById('spin_button').className = "";
-
                     // Begin the spin animation by calling startAnimation on the wheel object.
                     wheelOne.startAnimation();
-
-                    // Set to true so that power can't be changed and spin button re-enabled during
-                    // the current animation. The user will have to reset before spinning again.
-                    wheelSpinning = true;
-                }
+                
             }
             function spinTwo()
             {
-                // Ensure that spinning can't be clicked again while already running.
-                if (wheelSpinning == false) {
                     // Based on the power level selected adjust the number of spins for the wheel, the more times is has
                     // to rotate with the duration of the animation the quicker the wheel spins.
                     wheelTwo.animation.spins = 4;
 
-
-                    // Disable the spin button so can't click again while wheel is spinning.
-                    document.getElementById('spin_button').src       = "spin_off.png";
-                    document.getElementById('spin_button').className = "";
-
                     // Begin the spin animation by calling startAnimation on the wheel object.
                     wheelTwo.startAnimation();
-
-                    // Set to true so that power can't be changed and spin button re-enabled during
-                    // the current animation. The user will have to reset before spinning again.
-                    wheelSpinning = true;
-                }
             }
+
+            function spinThree()
+            {
+                    // Based on the power level selected adjust the number of spins for the wheel, the more times is has
+                    // to rotate with the duration of the animation the quicker the wheel spins.
+                    wheelTwo.animation.spins = 4;
+
+                    // Begin the spin animation by calling startAnimation on the wheel object.
+                    wheelThree.startAnimation();
+            }
+            
         </script>
     </body>
 </html> 
