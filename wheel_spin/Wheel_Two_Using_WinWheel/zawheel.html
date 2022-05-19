@@ -3,15 +3,14 @@
         <title>Spinners</title>
         <link rel="stylesheet" href="zawheel.css" type="text/css" />
         <script type="text/javascript" src="../Winwheel.js"></script>
-        <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js"></script>
+        <script src="zawheel.js"></script>
     </head>
     <body>
         <img id="spin_button" src="spin_off.png" alt="Spin" onClick="spinOne();" />
         <canvas
             id='canvas'
             width='880'
-            height='300'
-        >
+            height='300'>
             Canvas not supported, use another browser.
         </canvas>
 
@@ -21,8 +20,7 @@
         <canvas
             id='canvas2'
             width='880'
-            height='300'
-        >
+            height='300'>
             Canvas not supported, use another browser.
         </canvas>
 
@@ -32,8 +30,7 @@
         <canvas
             id='canvas3'
             width='880'
-            height='300'
-        >
+            height='300'>
             Canvas not supported, use another browser.
         </canvas>
         <script>
@@ -95,19 +92,17 @@
                 'drawMode'          : 'segmentImage', // Must be segmentImage to draw wheel using one image per segemnt.
                 'segments'          :                 // Define segments including image and text.
             [
-                {'image' : 'arm.jpg'},    // Specify image for segment along with text.
-                {'image' : 'arm.jpg'},
-                {'image' : 'arm.jpg'},
-                {'image' : 'arm.jpg'},
-                {'image' : 'arm.jpg'},
-                {'image' : 'arm.jpg'},
-                {'image' : 'arm.jpg'},
-                {'image' : 'arm.jpg'}
+                {'fillStyle' : '#DCDCDC', 'image' : 'arm.jpg'},    // Specify image for segment along with text.
+                {'fillStyle' : '#DCDCDC', 'image' : 'arm.jpg'},
+                {'fillStyle' : '#DCDCDC', 'image' : 'arm.jpg'},
+                {'fillStyle' : '#DCDCDC', 'image' : 'arm.jpg'},
+                {'fillStyle' : '#DCDCDC', 'image' : 'arm.jpg'},
+                {'fillStyle' : '#DCDCDC', 'image' : 'arm.jpg'},
+                {'fillStyle' : '#DCDCDC', 'image' : 'arm.jpg'},
+                {'fillStyle' : '#DCDCDC', 'image' : 'arm.jpg'}
             ]
 
 });
-
-            let wheelPower    = 1;
 
             function spinOne()
             {
