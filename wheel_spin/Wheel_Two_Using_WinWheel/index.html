@@ -97,6 +97,32 @@
             });
 
             let wheelThree = new Winwheel({
+                'numSegments'  : 10,     
+                'canvasId'     : 'canvas3',
+                'textFontSize' : 28,    
+                'segments'     :        
+                [
+                   {'fillStyle' : '#DCDCDC', 'text' : ''},
+                   {'fillStyle' : '#DCDCDC', 'text' : ''},
+                   {'fillStyle' : '#DCDCDC', 'text' : ''},
+                   {'fillStyle' : '#DCDCDC', 'text' : ''},
+                   {'fillStyle' : '#DCDCDC', 'text' : ''},
+                   {'fillStyle' : '#DCDCDC', 'text' : ''},
+                   {'fillStyle' : '#DCDCDC', 'text' : ''},
+                   {'fillStyle' : '#DCDCDC', 'text' : ''},
+                   {'fillStyle' : '#DCDCDC', 'text' : ''},
+                   {'fillStyle' : '#DCDCDC', 'text' : ''}
+                ],
+                'animation' :          
+                {
+                    'type'     : 'spinToStop',
+                    'duration' : 5,     
+                    'spins'    : 8,     
+                    
+                }
+            });
+
+            /*let wheelThree = new Winwheel({
                 'numSegments'       : 8,                        
                 'imageDirection' : 'S',   
                 'canvasId'     : 'canvas3',
@@ -112,8 +138,8 @@
                 {'fillStyle' : '#DCDCDC', 'image' : 'arm.jpg'},
                 {'fillStyle' : '#DCDCDC', 'image' : 'arm.jpg'}
             ]
-
-});
+            
+});*/
 
             function spinOne()
             {
