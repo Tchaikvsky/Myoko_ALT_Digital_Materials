@@ -42,7 +42,7 @@
         >
             Canvas not supported, use another browser.
         </canvas>
-        <img id="spin_button" src="spin_off.png" alt="Spin" onClick="spinTwo();" />
+        <img id="spin_button" src="spin_off.png" alt="Spin" onClick="spinThree();" />
 
         <script>
             let wheelOne = new Winwheel({
@@ -97,45 +97,29 @@
             });
 
             let wheelThree = new Winwheel({
-                'numSegments'  : 6,     
+                'numSegments'  : 6,                        
+                'drawText'     : true,
                 'canvasId'     : 'canvas3',
-                'textFontSize' : 28,    
-                'segments'     :        
-                [
-                   {'fillStyle' : '#DCDCDC', 'text' : ''},
-                   {'fillStyle' : '#DCDCDC', 'text' : ''},
-                   {'fillStyle' : '#DCDCDC', 'text' : ''},
-                   {'fillStyle' : '#DCDCDC', 'text' : ''},
-                   {'fillStyle' : '#DCDCDC', 'text' : ''},
-                   {'fillStyle' : '#DCDCDC', 'text' : ''},
-                ],
-                'animation' :          
+                'imageDirection' : 'N',
+                'drawMode'     : 'segmentImage', 
+                'segments'     :                 
+            [
+                { 'image' : 'arm_wedge.png'},    
+                { 'image' : 'ear_wedge.png'},
+                { 'image' : 'eye_wedge.png'},
+                { 'image' : 'head_wedge.png'},
+                { 'image' : 'leg_wedge.png'},
+                { 'image' : 'mouth_wedge.png'}
+            ],
+            'animation' :          
                 {
                     'type'     : 'spinToStop',
                     'duration' : 5,     
                     'spins'    : 8,     
                     
                 }
-            });
-
-            /*let wheelThree = new Winwheel({
-                'numSegments'       : 8,                        
-                'imageDirection' : 'S',   
-                'canvasId'     : 'canvas3',
-                'drawMode'          : 'segmentImage', 
-                'segments'          :                 
-            [
-                {'fillStyle' : '#DCDCDC', 'image' : 'arm.jpg'},    
-                {'fillStyle' : '#DCDCDC', 'image' : 'arm.jpg'},
-                {'fillStyle' : '#DCDCDC', 'image' : 'arm.jpg'},
-                {'fillStyle' : '#DCDCDC', 'image' : 'arm.jpg'},
-                {'fillStyle' : '#DCDCDC', 'image' : 'arm.jpg'},
-                {'fillStyle' : '#DCDCDC', 'image' : 'arm.jpg'},
-                {'fillStyle' : '#DCDCDC', 'image' : 'arm.jpg'},
-                {'fillStyle' : '#DCDCDC', 'image' : 'arm.jpg'}
-            ]
             
-});*/
+});
 
             function spinOne()
             {
