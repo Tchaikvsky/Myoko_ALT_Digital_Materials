@@ -1,48 +1,55 @@
 <html>
+
     <head>
         <title>Spinners</title>
         <link rel="stylesheet" href="zawheel.css" type="text/css" />
         <script type="text/javascript" src="../Winwheel.js"></script>
         <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js"></script>
     </head>
+
     <body>
-        <img id="spin_button" src="spin_off.png" alt="Spin" onClick="spinOne();" />
+        
+        <img id="arrow" src="arrow-down.png" alt="Choice">
         <canvas
             id='canvas'
-            width='880'
-            height='300'
+            width='400'
+            height='400'
         >
             Canvas not supported, use another browser.
         </canvas>
+        <img id="spin_button" src="spin_off.png" alt="Spin" onClick="spinOne();" />
 
-        <br><br>
+        <br><br><br><br><br>
 
-        <img id="spin_button" src="spin_off.png" alt="Spin" onClick="spinTwo();" />
+        
+        <img id="arrow" src="arrow-down.png" alt="Choice">
         <canvas
             id='canvas2'
-            width='880'
-            height='300'
+            width='400'
+            height='400'
         >
             Canvas not supported, use another browser.
         </canvas>
+        <img id="spin_button" src="spin_off.png" alt="Spin" onClick="spinTwo();" />
 
-        <br><br>
+        <br><br><br><br><br>
 
-        <img id="spin_button" src="spin_off.png" alt="Spin" onClick="spinThree();" />
+        <img id="arrow" src="arrow-down.png" alt="Choice">
         <canvas
             id='canvas3'
-            width='880'
-            height='300'
+            width='400'
+            height='400'
         >
             Canvas not supported, use another browser.
         </canvas>
+        <img id="spin_button" src="spin_off.png" alt="Spin" onClick="spinTwo();" />
+
         <script>
-            // Create new wheel object specifying the parameters at creation time.
             let wheelOne = new Winwheel({
-                'numSegments'  : 10,     // Specify number of segments.
+                'numSegments'  : 10,     
                 'canvasId'     : 'canvas',
-                'textFontSize' : 28,    // Set font size as desired.
-                'segments'     :       // Define segments including colour and text.
+                'textFontSize' : 28,    
+                'segments'     :       
                 [
                    {'fillStyle' : '#FFC0CB', 'text' : ''},
                    {'fillStyle' : '#9400D3', 'text' : ''},
@@ -55,19 +62,19 @@
                    {'fillStyle' : '#FFFFFF', 'text' : ''},
                    {'fillStyle' : '#000000', 'text' : ''}
                 ],
-                'animation' :           // Specify the animation to use.
+                'animation' :          
                 {
                     'type'     : 'spinToStop',
-                    'duration' : 5,     // Duration in seconds.
-                    'spins'    : 8,     // Number of complete spins.
+                    'duration' : 5,     
+                    'spins'    : 8,     
                 }
             });
 
             let wheelTwo = new Winwheel({
-                'numSegments'  : 10,     // Specify number of segments.
+                'numSegments'  : 10,     
                 'canvasId'     : 'canvas2',
-                'textFontSize' : 28,    // Set font size as desired.
-                'segments'     :        // Define segments including colour and text.
+                'textFontSize' : 28,    
+                'segments'     :        
                 [
                    {'fillStyle' : '#DCDCDC', 'text' : '1'},
                    {'fillStyle' : '#DCDCDC', 'text' : '2'},
@@ -80,22 +87,49 @@
                    {'fillStyle' : '#DCDCDC', 'text' : '9'},
                    {'fillStyle' : '#DCDCDC', 'text' : '10'}
                 ],
-                'animation' :           // Specify the animation to use.
+                'animation' :          
                 {
                     'type'     : 'spinToStop',
-                    'duration' : 5,     // Duration in seconds.
-                    'spins'    : 8,     // Number of complete spins.
+                    'duration' : 5,     
+                    'spins'    : 8,     
+                    
                 }
             });
 
             let wheelThree = new Winwheel({
+                'numSegments'  : 10,     
+                'canvasId'     : 'canvas3',
+                'textFontSize' : 28,    
+                'segments'     :        
+                [
+                   {'fillStyle' : '#DCDCDC', 'text' : ''},
+                   {'fillStyle' : '#DCDCDC', 'text' : ''},
+                   {'fillStyle' : '#DCDCDC', 'text' : ''},
+                   {'fillStyle' : '#DCDCDC', 'text' : ''},
+                   {'fillStyle' : '#DCDCDC', 'text' : ''},
+                   {'fillStyle' : '#DCDCDC', 'text' : ''},
+                   {'fillStyle' : '#DCDCDC', 'text' : ''},
+                   {'fillStyle' : '#DCDCDC', 'text' : ''},
+                   {'fillStyle' : '#DCDCDC', 'text' : ''},
+                   {'fillStyle' : '#DCDCDC', 'text' : ''}
+                ],
+                'animation' :          
+                {
+                    'type'     : 'spinToStop',
+                    'duration' : 5,     
+                    'spins'    : 8,     
+                    
+                }
+            });
+
+            /*let wheelThree = new Winwheel({
                 'numSegments'       : 8,                        
                 'imageDirection' : 'S',   
                 'canvasId'     : 'canvas3',
-                'drawMode'          : 'segmentImage', // Must be segmentImage to draw wheel using one image per segemnt.
-                'segments'          :                 // Define segments including image and text.
+                'drawMode'          : 'segmentImage', 
+                'segments'          :                 
             [
-                {'fillStyle' : '#DCDCDC', 'image' : 'arm.jpg'},    // Specify image for segment along with text.
+                {'fillStyle' : '#DCDCDC', 'image' : 'arm.jpg'},    
                 {'fillStyle' : '#DCDCDC', 'image' : 'arm.jpg'},
                 {'fillStyle' : '#DCDCDC', 'image' : 'arm.jpg'},
                 {'fillStyle' : '#DCDCDC', 'image' : 'arm.jpg'},
@@ -104,36 +138,25 @@
                 {'fillStyle' : '#DCDCDC', 'image' : 'arm.jpg'},
                 {'fillStyle' : '#DCDCDC', 'image' : 'arm.jpg'}
             ]
-
-});
+            
+});*/
 
             function spinOne()
             {
-                    // Based on the power level selected adjust the number of spins for the wheel, the more times is has
-                    // to rotate with the duration of the animation the quicker the wheel spins.
                     wheelOne.animation.spins = 4;
-
-                    // Begin the spin animation by calling startAnimation on the wheel object.
                     wheelOne.startAnimation();
                 
             }
             function spinTwo()
             {
-                    // Based on the power level selected adjust the number of spins for the wheel, the more times is has
-                    // to rotate with the duration of the animation the quicker the wheel spins.
                     wheelTwo.animation.spins = 4;
-
-                    // Begin the spin animation by calling startAnimation on the wheel object.
                     wheelTwo.startAnimation();
+                    
             }
 
             function spinThree()
             {
-                    // Based on the power level selected adjust the number of spins for the wheel, the more times is has
-                    // to rotate with the duration of the animation the quicker the wheel spins.
                     wheelTwo.animation.spins = 4;
-
-                    // Begin the spin animation by calling startAnimation on the wheel object.
                     wheelThree.startAnimation();
             }
             
