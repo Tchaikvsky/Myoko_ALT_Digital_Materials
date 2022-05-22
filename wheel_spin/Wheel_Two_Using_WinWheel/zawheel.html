@@ -1,41 +1,49 @@
 <html>
+
     <head>
         <title>Spinners</title>
         <link rel="stylesheet" href="zawheel.css" type="text/css" />
         <script type="text/javascript" src="../Winwheel.js"></script>
         <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js"></script>
     </head>
+
     <body>
-        <img id="spin_button" src="spin_off.png" alt="Spin" onClick="spinOne();" />
+        
+        <img id="arrow" src="arrow-down.png" alt="Choice">
         <canvas
             id='canvas'
             width='880'
-            height='500'
+            height='400'
         >
             Canvas not supported, use another browser.
         </canvas>
+        <img id="spin_button" src="spin_off.png" alt="Spin" onClick="spinOne();" />
 
-        <br><br>
+        <br><br><br><br><br>
 
-        <img id="spin_button" src="spin_off.png" alt="Spin" onClick="spinTwo();" />
+        
+        <img id="arrow" src="arrow-down.png" alt="Choice">
         <canvas
             id='canvas2'
             width='880'
-            height='500'
+            height='400'
         >
             Canvas not supported, use another browser.
         </canvas>
+        <img id="spin_button" src="spin_off.png" alt="Spin" onClick="spinTwo();" />
 
-        <br><br>
+        <br><br><br><br><br>
 
-        <img id="spin_button" src="spin_off.png" alt="Spin" onClick="spinThree();" />
+        <img id="arrow" src="arrow-down.png" alt="Choice">
         <canvas
             id='canvas3'
             width='880'
-            height='500'
+            height='400'
         >
             Canvas not supported, use another browser.
         </canvas>
+        <img id="spin_button" src="spin_off.png" alt="Spin" onClick="spinTwo();" />
+
         <script>
             let wheelOne = new Winwheel({
                 'numSegments'  : 10,     
