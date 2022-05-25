@@ -8,6 +8,7 @@
     </head>
 
     <body>
+        <img id="spin_button" src="images/spin_off.png" alt="Spin" onClick="resetWheel();" />
         
         <img id="arrow" src="images/arrow-down.png" alt="Choice">
         <canvas
@@ -124,7 +125,6 @@
             {
                     wheelOne.animation.spins = 4;
                     wheelOne.startAnimation();
-                
             }
             function spinTwo()
             {
@@ -137,6 +137,23 @@
             {
                     wheelTwo.animation.spins = 4;
                     wheelThree.startAnimation();
+            }
+
+            function resetWheel()
+            {
+                wheelOne.stopAnimation(false);  
+                wheelOne.rotationAngle = 0;     
+                wheelOne.draw();  
+
+                wheelTwo.stopAnimation(false);  
+                wheelTwo.rotationAngle = 0;     
+                wheelTwo.draw();       
+
+                wheelThree.stopAnimation(false);  
+                wheelThree.rotationAngle = 0;     
+                wheelThree.draw();               
+
+                wheelSpinning = false;          
             }
             
         </script>
