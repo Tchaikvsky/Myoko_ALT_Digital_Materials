@@ -28,6 +28,13 @@ body{
     margin-left: auto;
     margin-right: auto;
 }
+#reset_button {
+    width: 200px;
+    height: auto;
+    display: block;
+    margin-top: 100px;
+    margin-right: auto;
+}
 #arrow{
     height: 15%;
     display: block;
