@@ -1,1 +1,13 @@
 //Pipeline as a code
+//Example HelloWorld pipeline for now
+pipline{
+    agent any
+
+    stages{
+        stage('Hellos'){
+            steps{
+                echo 'Hello World'
+            }
+        }
+    }
+}
