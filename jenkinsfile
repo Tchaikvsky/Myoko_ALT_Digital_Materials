@@ -1,12 +1,31 @@
 //Pipeline as a code
-//Example HelloWorld pipeline for now
-pipline{
+pipeline {
     agent any
 
-    stages{
-        stage('Hellos'){
-            steps{
+    stages {
+        stage('Hello') {
+            steps {
                 echo 'Hello World'
+            }
+        }
+        stage('build') {
+            steps {
+                echo 'Building...'
+            }
+        }
+        stage('Deploy') {
+            steps {
+                echo 'Deploying'
+            }
+        }
+        stage('Testing') {
+            steps {
+                echo 'Testing'
+            }
+        }
+        stage('Release') {
+            steps {
+                echo 'Releasing...'
             }
         }
     }
