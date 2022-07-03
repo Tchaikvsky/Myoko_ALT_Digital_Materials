@@ -4,9 +4,6 @@ pipline{
     agent any
 
     stages{
-        stage('Git'{
-            git 'https://github.com/Tchaikvsky/Myoko_ALT_Digital_Materials.git'
-        }
         stage('Hellos'){
             steps{
                 echo 'Hello World'
