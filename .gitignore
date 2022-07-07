@@ -3,3 +3,6 @@ wheel_spin/Archives/
 
 #Mac Files
 .DS_Store
+
+#Zipped whinwheel library package
+.zip
