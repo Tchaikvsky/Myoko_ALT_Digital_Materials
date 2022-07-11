@@ -1,12 +1,13 @@
 .container{
     width: 100%;
-    height: 100vh;
+    height: 500px;
     display:flex;
     justify-content: center;
     align-items: center;
 }
 
 .card-container{
+    padding: 20px;
     width: 200px;
     height: 300px;
 }
@@ -16,6 +17,7 @@
     height: 100%;
     transition: transform 1s ease-in-out;
     transform-style: preserve-3d;
+    overflow-x: visible;
 }
 
 .card-container:hover .card{
@@ -36,14 +38,14 @@
 .card .front{
     background: rgb(100, 204, 204);
     color: black;
-    transform-style: preserve-3d;
     text-align: center;
+    backface-visibility: hidden;
 }
 
 .card .back{
     background: tan;
     color: black;
     transform: rotateY(180deg);
-    transform-style: preserve-3d;
     text-align: center;
+    backface-visibility: hidden;
 }
